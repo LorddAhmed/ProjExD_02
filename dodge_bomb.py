@@ -1,5 +1,7 @@
-import pygame as pg
+import random
 import sys
+
+import pygame as pg
 
 def main():
     pg.display.set_caption("逃げろ！こうかとん")
@@ -9,9 +11,13 @@ def main():
     kk_img = pg.image.load("ex02/fig/3.png")
     kk_img = pg.transform.rotozoom(kk_img, 0, 2.0)
     bomb_img = pg.Surface((20, 20))
+    pg.draw.circle(bomb_img, (255, 0, 0), (10, 10), 10)
     bomb_img.fill((255, 0, 0))
     bomb_img.set_colorkey((0, 0, 0))
-    pg.draw.circle(bomb_img, (255, 0, 0), (10, 10), 10)
+    x,y = random.randint(0,1600), random.randint(0,900)
+    
+
+
     tmr = 0
     while True:
         for event in pg.event.get():
@@ -21,7 +27,7 @@ def main():
         tmr += 1
         screen.blit(bg_img, [0, 0])
         screen.blit(kk_img, [900, 400])
-        screen.blit(bomb_img, [600, 200])
+        screen.blit(bomb_img, [x, y])
         draw_sfc = pg.Surface((100,100))
         pg.draw.circle(draw_sfc, (255,0,0), (50,50), 50)
 

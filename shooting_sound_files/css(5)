@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=-F6jfjtqLzI2JPCgQBnw7HFyzSD-AsregP8VFBEj757A5JQR2634gj72pifcw92av-3kHvmpJEP17D3CXd7j6VrhthBircgbS3geXjhK_7Afmfms&skey=72472b0eb8793570&v=v52) format('woff2');
+}
